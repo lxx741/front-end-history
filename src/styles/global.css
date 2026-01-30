@@ -17,6 +17,7 @@
 @layer components {
   .timeline-line {
     @apply absolute left-1/2 transform -translate-x-1/2 w-1 h-full rounded-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500;
+    transform: translateX(-50%) translateY(var(--ty, 0px));
   }
   
   .event-card {
@@ -37,6 +38,13 @@
   
   .floating-particle {
     @apply fixed pointer-events-none opacity-30;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .particle {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.3;
     animation: float 6s ease-in-out infinite;
   }
 }

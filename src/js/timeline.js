@@ -39,6 +39,8 @@ class TimelineController {
       if (btn.dataset.category === category) {
         btn.classList.add('ring-2', 'ring-offset-2', 'ring-blue-500');
       }
+      const pressed = btn.dataset.category === category ? 'true' : 'false';
+      btn.setAttribute('aria-pressed', pressed);
     });
   }
 
@@ -93,13 +95,9 @@ class TimelineController {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in');
           
-          // Add stagger effect for multiple events
-          const rect = entry.target.getBoundingClientRect();
-          const viewportHeight = window.innerHeight;
-          if (rect.top < viewportHeight && rect.bottom > 0) {
-            const delay = Math.random() * 200;
-            entry.target.style.animationDelay = `${delay}ms`;
-          }
+          const idx = parseInt(entry.target.dataset.index || '0', 10);
+          const delay = (idx % 10) * 50;
+          entry.target.style.animationDelay = `${delay}ms`;
         }
       });
     }, observerOptions);
@@ -108,28 +106,30 @@ class TimelineController {
   }
 
   setupScrollEffects() {
-    let lastScrollTop = 0;
     const timelineLine = document.querySelector('.timeline-line');
-    
-    window.addEventListener('scroll', () => {
+    let ticking = false;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const updateScrollEffects = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
-      
-      // Parallax effect for timeline
-      if (timelineLine) {
+      if (timelineLine && !prefersReducedMotion) {
         const speed = 0.5;
-        timelineLine.style.transform = `translateY(${scrollTop * speed}px)`;
+        const ty = scrollTop * speed;
+        timelineLine.style.setProperty('--ty', `${ty}px`);
       }
-      
-      // Add scroll-based classes
       if (scrollTop > 100) {
         document.body.classList.add('scrolled');
       } else {
         document.body.classList.remove('scrolled');
       }
-      
-      lastScrollTop = scrollTop;
-    });
+      ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateScrollEffects);
+      }
+    }, { passive: true });
+    updateScrollEffects();
   }
 
   setupKeyboardNavigation() {
