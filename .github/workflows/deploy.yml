@@ -37,6 +37,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          # 添加这个参数解决错误
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
