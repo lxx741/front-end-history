@@ -262,13 +262,16 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize with DOM readiness fallback
+const initTimeline = () => {
   window.timelineController = new TimelineController();
-  
-  // Make methods available globally for testing
   window.scrollToYear = (year) => window.timelineController.scrollToYear(year);
   window.exportTimeline = () => window.timelineController.exportTimeline();
-});
+};
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTimeline, { once: true });
+} else {
+  initTimeline();
+}
 
 export { TimelineController };
