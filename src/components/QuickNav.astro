@@ -1,0 +1,41 @@
+---
+// Quick Navigation Component
+import timelineData from '../data/timeline.json';
+
+const years = Array.from({ length: 36 }, (_, i) => 1990 + i);
+const yearEvents = new Map();
+
+// Count events per year
+years.forEach((year) => {
+  const yearData = timelineData.find(y => y.year === year);
+  if (yearData) {
+    yearEvents.set(year, yearData.events.length);
+  }
+});
+---
+
+<!-- Quick Navigation Sidebar -->
+<div class="fixed right-4 top-1/2 transform -translate-y-1/2 z-30 hidden lg:block">
+  <div class="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-3 border border-gray-200">
+    <h3 class="text-xs font-bold text-gray-600 mb-2 text-center">快速导航</h3>
+    <div class="space-y-1 max-h-96 overflow-y-auto">
+      {years.map((year) => {
+        const eventCount = yearEvents.get(year) || 0;
+        if (eventCount === 0) return null;
+        
+        return (
+          <button 
+            onclick="scrollToYear({year})"
+            class="block w-full text-left px-2 py-1 text-xs rounded hover:bg-blue-100 transition-colors {eventCount > 2 ? 'font-bold' : ''}"
+            title={`${year}年 (${eventCount}个事件)`}
+          >
+            {year}
+            {eventCount > 1 && (
+              <span class="ml-1 text-gray-500">({eventCount})</span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+  </div>
+</div>

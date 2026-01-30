@@ -1,0 +1,525 @@
+[
+  {
+    "year": 1990,
+    "events": [
+      {
+        "id": "1990-001",
+        "title": "万维网诞生",
+        "description": "Tim Berners-Lee在欧洲核子研究组织（CERN）发明了万维网，同时创造了第一个网页浏览器WorldWideWeb",
+        "category": "milestone",
+        "importance": "critical",
+        "icon": "🌐"
+      }
+    ]
+  },
+  {
+    "year": 1991,
+    "events": [
+      {
+        "id": "1991-001",
+        "title": "HTML 1.0发布",
+        "description": "HTML1.0正式发布，仅包含18个标签，标志着网页标准化开始",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📄"
+      },
+      {
+        "id": "1991-002",
+        "title": "首个网页上线",
+        "description": "Tim Berners-Lee发布了世界上第一个网页，介绍万维网的概念",
+        "category": "milestone",
+        "importance": "high",
+        "icon": "🎉"
+      }
+    ]
+  },
+  {
+    "year": 1993,
+    "events": [
+      {
+        "id": "1993-001",
+        "title": "Mosaic浏览器发布",
+        "description": "NCSA发布Mosaic浏览器，这是第一个广泛使用的图形界面网页浏览器，支持图片内联显示",
+        "category": "browser",
+        "importance": "high",
+        "icon": "🖼️"
+      },
+      {
+        "id": "1993-002",
+        "title": "Cookie技术诞生",
+        "description": "Lou Montulli发明了Cookie技术，解决了HTTP无状态的问题，为用户追踪和个性化服务奠定基础",
+        "category": "technology",
+        "importance": "medium",
+        "icon": "🍪"
+      }
+    ]
+  },
+  {
+    "year": 1994,
+    "events": [
+      {
+        "id": "1994-001",
+        "title": "网景公司成立",
+        "description": "Marc Andreessen创立网景公司，发布Netscape Navigator浏览器",
+        "category": "browser",
+        "importance": "high",
+        "icon": "🏢"
+      },
+      {
+        "id": "1994-002",
+        "title": "W3C成立",
+        "description": "Tim Berners-Lee创建万维网联盟（W3C），负责制定Web标准",
+        "category": "organization",
+        "importance": "critical",
+        "icon": "⚖️"
+      }
+    ]
+  },
+  {
+    "year": 1995,
+    "events": [
+      {
+        "id": "1995-001",
+        "title": "JavaScript诞生",
+        "description": "Brendan Eich在10天内为Netscape Navigator 2.0创造了JavaScript（最初叫Mocha）",
+        "category": "technology",
+        "importance": "critical",
+        "icon": "⚡"
+      },
+      {
+        "id": "1995-002",
+        "title": "IE浏览器发布",
+        "description": "微软发布Internet Explorer，开启浏览器战争时代",
+        "category": "browser",
+        "importance": "high",
+        "icon": "🔍"
+      },
+      {
+        "id": "1995-003",
+        "title": "PHP诞生",
+        "description": "Rasmus Lerdorf创造了PHP，最初用于个人主页制作，后来成为重要的服务器端语言",
+        "category": "technology",
+        "importance": "medium",
+        "icon": "🐘"
+      }
+    ]
+  },
+  {
+    "year": 1996,
+    "events": [
+      {
+        "id": "1996-001",
+        "title": "CSS 1.0成为标准",
+        "description": "CSS1成为W3C推荐标准，实现了内容与表现的分离",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🎨"
+      },
+      {
+        "id": "1996-002",
+        "title": "Flash问世",
+        "description": "Macromedia发布Flash，为网页动画和交互带来新可能",
+        "category": "technology",
+        "importance": "medium",
+        "icon": "🎬"
+      }
+    ]
+  },
+  {
+    "year": 1997,
+    "events": [
+      {
+        "id": "1997-001",
+        "title": "ECMAScript标准确立",
+        "description": "ECMA国际组织发布ECMA-262标准，JavaScript语言正式标准化",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📋"
+      }
+    ]
+  },
+  {
+    "year": 1998,
+    "events": [
+      {
+        "id": "1998-001",
+        "title": "DOM Level 1发布",
+        "description": "W3C发布DOM Level 1规范，为JavaScript操作网页元素提供标准接口",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🌳"
+      }
+    ]
+  },
+  {
+    "year": 2000,
+    "events": [
+      {
+        "id": "2000-001",
+        "title": "XMLHttpRequest诞生",
+        "description": "Microsoft在IE 5中引入XMLHttpRequest对象，为AJAX技术奠定基础",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📡"
+      }
+    ]
+  },
+  {
+    "year": 2003,
+    "events": [
+      {
+        "id": "2003-001",
+        "title": "Safari浏览器发布",
+        "description": "Apple发布Safari浏览器，基于KHTML引擎",
+        "category": "browser",
+        "importance": "medium",
+        "icon": "🧭"
+      }
+    ]
+  },
+  {
+    "year": 2004,
+    "events": [
+      {
+        "id": "2004-001",
+        "title": "Firefox 1.0发布",
+        "description": "Mozilla基金会发布Firefox 1.0，挑战IE的统治地位",
+        "category": "browser",
+        "importance": "high",
+        "icon": "🦊"
+      }
+    ]
+  },
+  {
+    "year": 2005,
+    "events": [
+      {
+        "id": "2005-001",
+        "title": "AJAX术语 coined",
+        "description": "Jesse James Garrett提出AJAX概念，标志现代Web应用开发开始",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🔄"
+      }
+    ]
+  },
+  {
+    "year": 2006,
+    "events": [
+      {
+        "id": "2006-001",
+        "title": "jQuery发布",
+        "description": "John Resig发布jQuery 1.0，简化DOM操作和事件处理，成为最流行的JavaScript库",
+        "category": "framework",
+        "importance": "critical",
+        "icon": "💎"
+      }
+    ]
+  },
+  {
+    "year": 2008,
+    "events": [
+      {
+        "id": "2008-001",
+        "title": "Chrome浏览器发布",
+        "description": "Google发布Chrome浏览器，带来V8 JavaScript引擎，性能大幅提升",
+        "category": "browser",
+        "importance": "critical",
+        "icon": "🌐"
+      }
+    ]
+  },
+  {
+    "year": 2009,
+    "events": [
+      {
+        "id": "2009-001",
+        "title": "Node.js诞生",
+        "description": "Ryan Dahl发布Node.js，JavaScript进入服务器端开发领域",
+        "category": "technology",
+        "importance": "critical",
+        "icon": "🚀"
+      },
+      {
+        "id": "2009-002",
+        "title": "ES5发布",
+        "description": "ECMAScript 5发布，带来严格模式和JSON支持等重要特性",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📖"
+      }
+    ]
+  },
+  {
+    "year": 2010,
+    "events": [
+      {
+        "id": "2010-001",
+        "title": "AngularJS发布",
+        "description": "Google发布AngularJS，引入数据绑定和依赖注入等概念",
+        "category": "framework",
+        "importance": "high",
+        "icon": "🅰️"
+      },
+      {
+        "id": "2010-002",
+        "title": "HTML5草案发布",
+        "description": "HTML5草案发布，引入语义化标签、Canvas、Video等新特性",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📱"
+      }
+    ]
+  },
+  {
+    "year": 2011,
+    "events": [
+      {
+        "id": "2011-001",
+        "title": "Bootstrap发布",
+        "description": "Twitter发布Bootstrap，成为最受欢迎的CSS框架",
+        "category": "framework",
+        "importance": "medium",
+        "icon": "🎯"
+      }
+    ]
+  },
+  {
+    "year": 2012,
+    "events": [
+      {
+        "id": "2012-001",
+        "title": "TypeScript发布",
+        "description": "Microsoft发布TypeScript，为JavaScript添加静态类型支持",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📘"
+      }
+    ]
+  },
+  {
+    "year": 2013,
+    "events": [
+      {
+        "id": "2013-001",
+        "title": "React发布",
+        "description": "Facebook发布React，引入虚拟DOM和组件化开发思想",
+        "category": "framework",
+        "importance": "critical",
+        "icon": "⚛️"
+      },
+      {
+        "id": "2013-002",
+        "title": "Vue.js发布",
+        "description": "尤雨溪发布Vue.js，以轻量级和易学著称",
+        "category": "framework",
+        "importance": "high",
+        "icon": "💚"
+      }
+    ]
+  },
+  {
+    "year": 2014,
+    "events": [
+      {
+        "id": "2014-001",
+        "title": "ES6/ES2015发布",
+        "description": "ECMAScript 2015发布，带来箭头函数、Promise、模块化等重要特性",
+        "category": "technology",
+        "importance": "critical",
+        "icon": "🚀"
+      },
+      {
+        "id": "2014-002",
+        "title": "Web Components规范",
+        "description": "Web Components技术栈成为W3C标准，包括Custom Elements、Shadow DOM等",
+        "category": "technology",
+        "importance": "medium",
+        "icon": "🧩"
+      }
+    ]
+  },
+  {
+    "year": 2015,
+    "events": [
+      {
+        "id": "2015-001",
+        "title": "PWA概念提出",
+        "description": "Google提出Progressive Web Apps概念，结合Web和原生应用优势",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📲"
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "events": [
+      {
+        "id": "2016-001",
+        "title": "小程序时代开启",
+        "description": "微信推出小程序，开启中国独有的小程序技术生态",
+        "category": "technology",
+        "importance": "high",
+        "icon": "📱"
+      },
+      {
+        "id": "2016-002",
+        "title": "Angular 2发布",
+        "description": "Angular 2发布，完全重写的框架，使用TypeScript开发",
+        "category": "framework",
+        "importance": "medium",
+        "icon": "🔄"
+      }
+    ]
+  },
+  {
+    "year": 2017,
+    "events": [
+      {
+        "id": "2017-001",
+        "title": "WebAssembly正式发布",
+        "description": "WebAssembly成为W3C标准，支持C/C++、Rust等语言编译到Web",
+        "category": "technology",
+        "importance": "high",
+        "icon": "⚙️"
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "events": [
+      {
+        "id": "2018-001",
+        "title": "Vue 3.0计划启动",
+        "description": "Vue.js团队启动Vue 3.0开发计划，使用Composition API",
+        "category": "framework",
+        "importance": "medium",
+        "icon": "🔮"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "events": [
+      {
+        "id": "2019-001",
+        "title": "Svelte 3.0发布",
+        "description": "Svelte 3.0发布，采用编译时优化，无虚拟DOM的框架",
+        "category": "framework",
+        "importance": "medium",
+        "icon": "🔥"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "events": [
+      {
+        "id": "2020-001",
+        "title": "Vite发布",
+        "description": "尤雨溪发布Vite，基于ES modules的新一代构建工具",
+        "category": "tool",
+        "importance": "high",
+        "icon": "⚡"
+      },
+      {
+        "id": "2020-002",
+        "title": "Vue 3.0发布",
+        "description": "Vue 3.0正式发布，带来Composition API和性能提升",
+        "category": "framework",
+        "importance": "high",
+        "icon": "🎉"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "events": [
+      {
+        "id": "2021-001",
+        "title": "React 18发布",
+        "description": "React 18发布，带来并发渲染和自动批处理等特性",
+        "category": "framework",
+        "importance": "high",
+        "icon": "⚛️"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "events": [
+      {
+        "id": "2022-001",
+        "title": "Vue 2.0停止维护",
+        "description": "Vue 2.0正式停止维护，社区转向Vue 3",
+        "category": "framework",
+        "importance": "medium",
+        "icon": "🔚"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "events": [
+      {
+        "id": "2023-001",
+        "title": "AI集成趋势",
+        "description": "ChatGPT等AI工具深度集成到前端开发流程，GitHub Copilot普及",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🤖"
+      },
+      {
+        "id": "2023-002",
+        "title": "Signals概念兴起",
+        "description": "Signals（信号）概念在前端框架中兴起，影响状态管理设计",
+        "category": "technology",
+        "importance": "medium",
+        "icon": "📶"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "events": [
+      {
+        "id": "2024-001",
+        "title": "WebAssembly标准化推进",
+        "description": "WebAssembly生态系统成熟，更多高性能应用采用WASM",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🚀"
+      },
+      {
+        "id": "2024-002",
+        "title": "AI前端工具爆发",
+        "description": "AI驱动的开发工具成为主流，自动代码生成和优化普及",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🧠"
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "events": [
+      {
+        "id": "2025-001",
+        "title": "无虚拟DOM框架兴起",
+        "description": "更多框架采用编译时优化，减少运行时开销",
+        "category": "framework",
+        "importance": "medium",
+        "icon": "⚡"
+      },
+      {
+        "id": "2025-002",
+        "title": "跨端技术统一",
+        "description": "React Native、Flutter等跨端技术进一步成熟，实现真正的代码复用",
+        "category": "technology",
+        "importance": "high",
+        "icon": "🔗"
+      }
+    ]
+  }
+]

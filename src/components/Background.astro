@@ -1,0 +1,108 @@
+---
+// Background Animation Component
+---
+
+<!-- Animated Background -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: 1;">
+  <!-- Code Rain Effect -->
+  <div class="code-rain absolute inset-0 opacity-5">
+    {Array.from({ length: 20 }).map((_, i) => (
+      <div 
+        class="code-stream absolute text-green-500 font-mono text-xs"
+        style={{
+          left: `${i * 5}%`,
+          animationDelay: `${Math.random() * 5}s`,
+          animationDuration: `${10 + Math.random() * 20}s`
+        }}
+      >
+        {Array.from({ length: 30 }).map((_, j) => (
+          <div class="whitespace-pre">
+            {['function', 'const', 'let', 'var', 'if', 'else', 'for', 'while', 'return', 'import', 'export'][Math.floor(Math.random() * 11)]}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+  
+  <!-- Floating Geometric Shapes -->
+  <div class="geometric-shapes absolute inset-0">
+    {Array.from({ length: 8 }).map((_, i) => {
+      const shapes = ['circle', 'square', 'triangle'];
+      const shape = shapes[Math.floor(Math.random() * shapes.length)];
+      const colors = ['bg-blue-200', 'bg-purple-200', 'bg-pink-200', 'bg-green-200'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      
+      return (
+        <div 
+          class={`geometric-shape absolute ${color} opacity-20`}
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 10}s`,
+            animationDuration: `${15 + Math.random() * 20}s`,
+            transform: `scale(${0.5 + Math.random() * 1.5})`
+          }}
+        >
+          {shape === 'circle' && (
+            <div class="w-16 h-16 rounded-full"></div>
+          )}
+          {shape === 'square' && (
+            <div class="w-12 h-12 transform rotate-45"></div>
+          )}
+          {shape === 'triangle' && (
+            <div class="w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-current"></div>
+          )}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+<style>
+  .code-stream {
+    animation: codeFall linear infinite;
+  }
+  
+  @keyframes codeFall {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.1;
+    }
+    90% {
+      opacity: 0.1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+  
+  .geometric-shape {
+    animation: floatRotate linear infinite;
+  }
+  
+  @keyframes floatRotate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-30px) rotate(90deg);
+    }
+    50% {
+      transform: translateY(-60px) rotate(180deg);
+    }
+    75% {
+      transform: translateY(-30px) rotate(270deg);
+    }
+    100% {
+      transform: translateY(0) rotate(360deg);
+    }
+  }
+  
+  .code-rain {
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,255,0,0.03) 50%, transparent 100%);
+  }
+</style>
