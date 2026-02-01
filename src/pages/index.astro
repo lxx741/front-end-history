@@ -165,55 +165,56 @@ function getCategoryIcon(event: TimelineEvent): string {
   <main class="relative z-10 max-w-6xl mx-auto px-4 py-12">
     <div class="relative">
       <!-- Vertical Timeline Line -->
-      <div class="timeline-line absolute left-1/2 transform -translate-x-1/2 w-1 h-full rounded-full"></div>
+      <div class="timeline-line absolute left-8 md:left-12 top-0 bottom-0 w-1 h-full rounded-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
       
       <!-- Timeline Events -->
       {years.map((yearData, yearIndex) => (
-        <div class="timeline-year mb-16" data-year={yearData.year} id={`year-${yearData.year}`}>
+        <div class="timeline-year mb-16 relative" data-year={yearData.year} id={`year-${yearData.year}`}>
           <!-- Year Marker -->
-          <div class="year-marker sticky top-24 z-20 inline-block mx-auto mb-8 px-6 py-3 rounded-full text-white font-bold text-xl shadow-lg">
-            {yearData.year} 年
+          <div class="year-marker sticky top-24 z-20 flex items-center mb-10">
+            <div class="absolute left-8 md:left-12 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-blue-600 rounded-full"></div>
+            <div class="ml-20 md:ml-32 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-xl rounded-full shadow-lg">
+              {yearData.year} 年
+            </div>
           </div>
           
           <!-- Events for this year -->
-          {yearData.events.map((event, eventIndex) => {
-            const isLeft = eventIndex % 2 === 0;
-            const categoryConfig = CATEGORIES[event.category];
-            const eraColor = getEraColor(yearData.year);
-            const importanceClass = getImportanceClasses(event.importance);
-            
-            return (
-              <div 
-                class={`timeline-event event-card relative mb-12 ${isLeft ? 'md:mr-auto md:ml-0 md:pr-16 md:text-right' : 'md:ml-auto md:mr-0 md:pl-16'} ${importanceClass}`}
-                data-category={event.category}
-                data-importance={event.importance}
-                data-index={eventIndex}
-                style={isLeft ? {} : {}}
-              >
-                <!-- Connecting line to timeline -->
-                <div class={`absolute top-1/2 transform -translate-y-1/2 w-8 h-1 bg-gradient-to-r ${isLeft ? 'from-transparent to-gray-300 right-full' : 'from-gray-300 to-transparent left-full'}`}></div>
-                
-                <!-- Event content -->
-                <div class="relative">
-                  <!-- Icon -->
-                  <div class={`absolute ${isLeft ? '-right-2' : '-left-2'} top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white rounded-full border-4 border-gray-300 flex items-center justify-center text-2xl shadow-md`}>
-                    {getCategoryIcon(event)}
-                  </div>
+          <div class="space-y-8">
+            {yearData.events.map((event, eventIndex) => {
+              const categoryConfig = CATEGORIES[event.category];
+              const importanceClass = getImportanceClasses(event.importance);
+              
+              return (
+                <div 
+                  class={`timeline-event relative ml-20 md:ml-32 mr-4 ${importanceClass}`}
+                  data-category={event.category}
+                  data-importance={event.importance}
+                  data-index={eventIndex}
+                >
+                  <!-- Connecting line to timeline -->
+                  <div class="absolute top-8 -left-12 md:-left-20 w-12 md:w-20 h-0.5 bg-gray-300"></div>
                   
-                  <!-- Event details -->
-                  <div class="pl-4 pr-4">
-                    <h3 class="font-bold mb-2">{event.title}</h3>
-                    <p class="text-sm opacity-90 leading-relaxed">{event.description}</p>
-                    
-                    <!-- Category badge -->
-                    <div class={`mt-3 inline-block px-2 py-1 rounded text-xs font-medium`} style="background-color: {categoryConfig.bgColor}; color: {categoryConfig.color};">
-                      {categoryConfig.label}
+                  <!-- Icon on timeline -->
+                  <div class="absolute top-8 left-[-3rem] md:left-[-5rem] transform -translate-x-1/2 -translate-y-1/2 z-10">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full border-4 border-gray-200 flex items-center justify-center text-xl shadow-md transition-transform hover:scale-110">
+                      {getCategoryIcon(event)}
                     </div>
                   </div>
+                  
+                  <!-- Event content -->
+                  <div class="relative">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-2">
+                      <h3 class="font-bold text-lg md:text-xl">{event.title}</h3>
+                      <div class={`inline-block px-2 py-1 rounded text-xs font-medium self-start shrink-0`} style={`background-color: ${categoryConfig.bgColor}; color: ${categoryConfig.color};`}>
+                        {categoryConfig.label}
+                      </div>
+                    </div>
+                    <p class="text-sm md:text-base opacity-90 leading-relaxed">{event.description}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       ))}
     </div>
